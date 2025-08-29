@@ -1,0 +1,57 @@
+{
+  "name": "@localwebcafe/responsive-tabs",
+  "version": "1.0.0",
+  "description": "A responsive tabs component for React with mobile dropdown support",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/localwebcafe/responsive-tab.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "workspaces": [
+    "responsive-tabs"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepublishOnly": "npm run build",
+    "publish:github": "bash scripts/publish-github.sh"
+  },
+  "keywords": [
+    "react",
+    "tabs",
+    "responsive",
+    "mobile",
+    "dropdown",
+    "typescript",
+    "tailwindcss"
+  ],
+  "author": "Adewale Adegoroye",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.487.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/react": "^18.3.3",
+    "rollup": "^4.0.0",
+    "rollup-plugin-dts": "^6.0.0",
+    "typescript": "^5.5.3"
+  }
+}
